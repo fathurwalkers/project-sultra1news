@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Faker\Factory as Faker;
 
 class FrontController extends Controller
 {
@@ -13,6 +14,10 @@ class FrontController extends Controller
 
     public function index()
     {
-        return view('dashboard.index');
+        $faker = Faker::create('id_ID');
+        $data = [
+            'nama' => $faker->name
+        ];
+        return view('dashboard.index', compact('data'));
     }
 }
