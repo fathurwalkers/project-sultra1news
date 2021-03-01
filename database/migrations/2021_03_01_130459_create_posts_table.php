@@ -10,6 +10,21 @@ class CreatePostsTable extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->id();
+            $table->text('post_judul');
+            $table->string('post_slug');
+            $table->longText('post_body');
+            $table->string('post_headerfoto');
+            $table->string('post_status');
+            $table->string('post_code');
+
+            $table->unsignedBigInteger('kategori_id')->nullable();
+            $table->unsignedBigInteger('detail_id')->nullable();
+            $table->unsignedBigInteger('gambar_id')->nullable();
+
+            $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
+            $table->foreign('detail_id')->references('id')->on('detail')->onDelete('cascade');
+            $table->foreign('gambar_id')->references('id')->on('gambar')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

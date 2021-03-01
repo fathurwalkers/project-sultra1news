@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Gambar;
+use App\Models\Detail;
+use App\Models\Kategori;
 
 class Post extends Model
 {
@@ -11,4 +14,19 @@ class Post extends Model
 
     protected $table = 'post';
     protected $guarded = [];
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
+    }
+
+    public function detail()
+    {
+        return $this->belongsTo(Detail::class);
+    }
+
+    public function gambar()
+    {
+        return $this->belongsTo(Gambar::class);
+    }
 }

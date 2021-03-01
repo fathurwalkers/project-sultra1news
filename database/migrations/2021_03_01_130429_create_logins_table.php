@@ -10,12 +10,17 @@ class CreateLoginsTable extends Migration
     {
         Schema::create('login', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
+            $table->string('username')->unique();
             $table->string('password');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('level');
             $table->string('status');
             $table->string('token')->unique();
+
+            $table->unsignedBigInteger('detail_id')->nullable();
+
+            $table->foreign('detail_id')->references('id')->on('detail')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

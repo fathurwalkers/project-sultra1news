@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Detail;
+use App\Models\Post;
 
-class Login extends Model
+class Gambar extends Model
 {
     use HasFactory;
 
-    protected $table = 'login';
+    protected $table = 'gambar';
     protected $guarded = [];
 
-    public function detail()
+    public function post()
     {
-        return $this->belongsTo(Detail::class);
+        return $this->hasMany(Post::class);
     }
 }
