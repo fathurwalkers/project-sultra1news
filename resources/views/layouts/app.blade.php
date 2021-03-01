@@ -18,6 +18,7 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/components.css') }}">
+  <livewire:styles />
 </head>
 
 <body>
@@ -189,5 +190,6 @@
 
   <!-- Page Specific JS File -->
   <script src="{{ asset('assets/stisla/assets/js/page/index-0.js') }}"></script>
+  <livewire:scripts />
 </body>
 </html>
