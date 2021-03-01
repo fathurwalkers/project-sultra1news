@@ -780,7 +780,7 @@
                         <input type="checkbox" class="custom-control-input" id="cbx-1">
                         <label class="custom-control-label" for="cbx-1"></label>
                       </div>
-                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-4.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets/img/avatar/avatar-4.png') }}" alt="avatar">
                       <div class="media-body">
                         <div class="badge badge-pill badge-danger mb-1 float-right">Not Finished</div>
                         <h6 class="media-title"><a href="#">Redesign header</a></h6>
@@ -792,7 +792,7 @@
                         <input type="checkbox" class="custom-control-input" id="cbx-2" checked="">
                         <label class="custom-control-label" for="cbx-2"></label>
                       </div>
-                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-5.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets/img/avatar/avatar-5.png') }}" alt="avatar">
                       <div class="media-body">
                         <div class="badge badge-pill badge-primary mb-1 float-right">Completed</div>
                         <h6 class="media-title"><a href="#">Add a new component</a></h6>
@@ -804,7 +804,7 @@
                         <input type="checkbox" class="custom-control-input" id="cbx-3" >
                         <label class="custom-control-label" for="cbx-3"></label>
                       </div>
-                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-2.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets/img/avatar/avatar-2.png') }}" alt="avatar">
                       <div class="media-body">
                         <div class="badge badge-pill badge-warning mb-1 float-right">Progress</div>
                         <h6 class="media-title"><a href="#">Fix modal window</a></h6>
@@ -816,7 +816,7 @@
                         <input type="checkbox" class="custom-control-input" id="cbx-4">
                         <label class="custom-control-label" for="cbx-4"></label>
                       </div>
-                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar">
+                      <img class="mr-3 rounded-circle" width="50" src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar">
                       <div class="media-body">
                         <div class="badge badge-pill badge-danger mb-1 float-right">Not Finished</div>
                         <h6 class="media-title"><a href="#">Remove unwanted classes</a></h6>
@@ -883,7 +883,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -900,7 +900,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -917,7 +917,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -934,7 +934,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -951,7 +951,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -968,7 +968,7 @@
                             </div>
                           </td>
                           <td>
-                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets') }}img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
+                            <a href="#" class="font-weight-600"><img src="{{ asset('assets/stisla/assets/img/avatar/avatar-1.png') }}" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
                           </td>
                           <td>
                             <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
@@ -1001,21 +1001,21 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="{{ asset('assets/stisla/assets') }}js/stisla.js"></script>
+  <script src="{{ asset('assets/stisla/assets/js/stisla.js') }}"></script>
 
   <!-- JS Libraies -->
-  <script src="../node_modules/simpleweather/jquery.simpleWeather.min.js"></script>
+  {{-- <script src="../node_modules/simpleweather/jquery.simpleWeather.min.js"></script>
   <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
   <script src="../node_modules/jqvmap/dist/jquery.vmap.min.js"></script>
   <script src="../node_modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
   <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
-  <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script> --}}
 
   <!-- Template JS File -->
-  <script src="{{ asset('assets/stisla/assets') }}js/scripts.js"></script>
-  <script src="{{ asset('assets/stisla/assets') }}js/custom.js"></script>
+  <script src="{{ asset('assets/stisla/assets/js/scripts.js') }}"></script>
+  <script src="{{ asset('assets/stisla/assets/js/custom.js') }}"></script>
 
   <!-- Page Specific JS File -->
-  <script src="{{ asset('assets/stisla/assets') }}js/page/index-0.js"></script>
+  <script src="{{ asset('assets/stisla/assets/js/page/index-0.js') }}"></script>
 </body>
 </html>
