@@ -10,6 +10,12 @@ class CreateLoginsTable extends Migration
     {
         Schema::create('login', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('password');
+            $table->string('email');
+            $table->string('level');
+            $table->string('status');
+            $table->string('token')->unique();
             $table->timestamps();
         });
     }

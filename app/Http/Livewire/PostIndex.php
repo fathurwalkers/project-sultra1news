@@ -7,9 +7,11 @@ use Livewire\Component;
 class PostIndex extends Component
 {
     public $post;
+    public $faker;
+    public $data;
+
     public function render()
     {
-        // $this->post = Post::latest()->paginate(5);
         return view('livewire.post-index')->extends('layouts.app');
     }
 }
