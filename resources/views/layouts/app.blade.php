@@ -133,7 +133,8 @@
               <li class="nav-item dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                  <li><a class="nav-link" href="{{ route('dashboard') }}">Ecommerce Dashboard</a></li>
+                  <li><a class="nav-link" href="{{ route('post-index') }}">Ecommerce Dashboard</a></li>
                 </ul>
               </li>
             </ul>
@@ -153,7 +154,8 @@
             <h1>Dashboard</h1>
           </div>
           <div class="row">
-            
+            {{-- {{ $slot }} --}}
+            @yield('content')
           </div>
         </section>
       </div>
