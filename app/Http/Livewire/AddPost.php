@@ -8,6 +8,6 @@ class AddPost extends Component
 {
     public function render()
     {
-        return view('livewire.add-post');
+        return view('livewire.add-post')->extends('layouts.app');
     }
 }

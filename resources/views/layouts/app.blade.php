@@ -135,6 +135,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="{{ route('dashboard') }}">Ecommerce Dashboard</a></li>
                   <li><a class="nav-link" href="{{ route('post-index') }}">Ecommerce Dashboard</a></li>
+                  <li><a class="nav-link" href="{{ route('add-post') }}">Ecommerce Dashboard</a></li>
                 </ul>
               </li>
             </ul>
