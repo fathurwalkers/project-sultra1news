@@ -19,12 +19,14 @@ class BackController extends Controller
         $post_judul = $faker->words($random, true);
         $explode_judul = explode(' ', $judul);
         $post_slug = implode('-', $explode_judul);
+        $post_body = $faker->paragraphs($random, true);
         dd($post_slug);
 
         $post = new Post;
         $savePost = $post->create([
             'post_judul' => $post_judul,
             'post_slug' => $post_slug,
+            'post_body' => $post_body,
         ]);
     }
 }
