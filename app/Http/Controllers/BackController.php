@@ -27,6 +27,7 @@ class BackController extends Controller
             'post_judul' => $post_judul,
             'post_slug' => $post_slug,
             'post_body' => $post_body,
+            'post_headerfoto' => 'image/no-image.png',
         ]);
     }
 }
