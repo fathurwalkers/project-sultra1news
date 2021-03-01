@@ -3,15 +3,18 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Post;
 
 class PostIndex extends Component
 {
-    public $post;
-    public $faker;
-    public $data;
-
     public function render()
     {
-        return view('livewire.post-index')->extends('layouts.app');
+        $post = Post::latest()->paginate(5);
+        return view(
+            'livewire.post-index',
+            [
+                'post' => $post
+                ]
+        )->extends('layouts.app');
     }
 }
