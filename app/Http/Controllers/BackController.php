@@ -12,11 +12,19 @@ class BackController extends Controller
 {
     public function generate_post()
     {
-        $array_random = ['5', '6', '7', '8', '9', '10'];
         $faker = Faker::create('id_ID');
+        
+        $array_random = ['5', '6', '7', '8', '9', '10'];
+        $random = Arr::random($array_random);
+        $post_judul = $faker->words($random, true);
+        $explode_judul = explode(' ', $judul);
+        $post_slug = implode('-', $explode_judul);
+        dd($post_slug);
+
         $post = new Post;
         $savePost = $post->create([
-            'post_judul' => $faker->word(Arr::random($array_random), true),
+            'post_judul' => $post_judul,
+            'post_slug' => $post_slug,
         ]);
     }
 }
