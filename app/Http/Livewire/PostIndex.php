@@ -22,7 +22,7 @@ class PostIndex extends Component
             [
                 'post' => $post
                 ]
-        )->extends('layouts.app');
+        )->extends('layouts.app')->section('content');
     }
 
     // public function paginationView()

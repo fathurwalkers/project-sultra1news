@@ -1,5 +1,5 @@
 <div>
-
+@section('header-title', 'Daftar Post')
     {{-- <div class="container"> --}}
 
         <div class="row">
@@ -8,9 +8,9 @@
 
                 <div class="card">
                     
-                    <div class="card-header">
+                    {{-- <div class="card-header">
                                 <h4>Simple Table</h4>
-                    </div>
+                    </div> --}}
                     
                     <div class="card-body">
                         
@@ -40,7 +40,7 @@
                                         <td class="py-1">{{ date('d/m/y', intval($item->post_tanggalpublish)) }}</td>
                                         <td class="py-1">{{ date('d/m/y', strtotime($item->created_at)) }}</td>
                                         <td class="py-1">
-                                            <a href="#" class="btn btn-success mx-1">Edit</a>
+                                            <a href="#" id="editme" class="btn btn-success mx-1">Edit</a>
                                             <a href="#" class="btn btn-info mx-1">Info</a>
                                             <a href="#" class="btn btn-danger mx-1">Delete</a>
                                         </td>
@@ -71,6 +71,28 @@
 
     {{-- </div> --}}
 
+@section('after-js')
+<script>
+$("#editme").fireModal({
+    body: '
 
+    <p>Your content goes here.</p>
+    
+    ',
+    created: function(modal) {
+        console.log('Modal has been created');
+    },
+    buttons: [
+      {
+        text: 'Action',
+        class: 'btn btn-primary btn-shadow',
+        handler: function(modal) {
+          alert('Clicked');
+        }
+      }
+    ]
+  });
+</script>
+@endsection
 
 </div>

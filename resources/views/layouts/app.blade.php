@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/components.css') }}">
   <livewire:styles />
+  @yield('after-css')
 </head>
 
 <body>
@@ -130,7 +131,7 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="{{ route('dashboard') }}">Ecommerce Dashboard</a></li>
@@ -155,7 +156,7 @@
           <div class="container">
 
           <div class="section-header">
-            <h1>Dashboard</h1>
+            <h1>@yield('header-title')</h1>
           </div>
           {{-- <div class="row"> --}}
             {{-- {{ $slot }} --}}
@@ -163,7 +164,7 @@
           {{-- </div> --}}
 
         </div>
-        
+
         </section>
       </div>
       {{-- <footer class="main-footer">
@@ -200,5 +201,6 @@
   <!-- Page Specific JS File -->
   <script src="{{ asset('assets/stisla/assets/js/page/index-0.js') }}"></script>
   <livewire:scripts />
+  @yield('after-js')
 </body>
 </html>
