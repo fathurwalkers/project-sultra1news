@@ -6,42 +6,28 @@
 
     <div class="container">
 
+        <form wire:submit.prevent="addPost">
+            @csrf
         <div class="row">
 
+            
             <div class="col-sm-12 col-md-8 col-lg-8">
                 
                 <div class="card">
                     <div class="card-body">
+
                         <div class="form-group">
-                            <label>Default Input Text</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone Number (US Format)</label>
+                            <label><h6>Judul Post : </h6></label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
                                         <i class="fas fa-phone"></i>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control phone-number">
+                                <input type="text" class="form-control phone-number" wire:model="post_judul">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>Password Strength</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="fas fa-lock"></i>
-                                </div>
-                            </div>
-                            <input type="password" class="form-control pwstrength" data-indicator="pwindicator">
-                        </div>
-                        <div id="pwindicator" class="pwindicator">
-                            <div class="bar"></div>
-                            <div class="label"></div>
-                        </div>
-                    </div>
+
                     </div>
                 </div>
 
@@ -50,9 +36,9 @@
 
 
             <div class="col-sm-12 col-md-4 col-lg-4">
-                
                 <div class="card">
                     <div class="card-body">
+
                         <div class="form-group">
                             <label>Date Range Picker</label>
                             <div class="input-group">
@@ -62,37 +48,26 @@
                                 </div>
                               </div>
                               <input type="date" class="form-control daterange-cus">
-                            </div>
-                          </div>
+                            </div>  
+                        </div>
+
                         <div class="form-group">
-                            <label>Phone Number (US Format)</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                </div>
-                                <input type="text" class="form-control phone-number">
+                            <label class="form-label">Kategori : </label>
+                            <div class="selectgroup selectgroup-pills">
+                                @php $i = 1; @endphp
+                                @foreach ($kategori as $cat)
+                                    <label class="selectgroup-item">
+                                        <input type="checkbox" wire:model="kategori_req[]" value="{{ $cat->id }}" class="selectgroup-input" checked="">
+                                        <span class="selectgroup-button">{{ $cat->kategori_nama }}</span>
+                                    </label>
+                                @endforeach
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>Password Strength</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="fas fa-lock"></i>
-                                </div>
-                            </div>
-                            <input type="password" class="form-control pwstrength" data-indicator="pwindicator">
-                        </div>
-                        <div id="pwindicator" class="pwindicator">
-                            <div class="bar"></div>
-                            <div class="label"></div>
-                        </div>
-                    </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        
                     </div>
                 </div>
-
             </div>
 
 
@@ -112,6 +87,7 @@
             </div>
 
         </div>
+        </form>
 
     </div>
 @section('after-js')

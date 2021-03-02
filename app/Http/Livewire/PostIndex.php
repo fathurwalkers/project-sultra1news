@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Post;
+use App\Models\Kategori;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
