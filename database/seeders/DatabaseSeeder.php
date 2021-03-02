@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Kategori;
 use App\Models\Detail;
 use App\Models\Login;
@@ -16,14 +18,25 @@ class DatabaseSeeder extends Seeder
             'detail_nama' => 'Administrator',
             'detail_telepon' => '085342072185',
             'detail_jeniskelamin' => 'L',
+            'detail_tanggallahir' => 'null',
+            'detail_foto' => 'null',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
+        $saveDetail->save();
 
+        $hashed = Hash::make('password', [
+            'rounds' => 12,
+        ]);
         $login = new Login;
         $saveLogin = $login->create([
             'username' => 'admin',
             'password' => 'admin',
             'email' => 'admin@sultra1news.com',
             'email' => 'admin@sultra1news.com',
+            'level' => 'admin',
+            'status' => 'aktif',
+            'token' => Str::random(16),
         ]);
 
         $kategori_array = [

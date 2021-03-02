@@ -7,6 +7,7 @@ use Faker\Factory as Faker;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Post;
 
 class BackController extends Controller
