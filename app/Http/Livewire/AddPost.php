@@ -12,7 +12,7 @@ class AddPost extends Component
     public $post_judul;
     public $post_body;
     public $kategori_req;
-
+    public $increment;
     public function render()
     {
         $kategori = Kategori::latest()->get();
@@ -31,9 +31,12 @@ class AddPost extends Component
     public function addPost()
     {
         $this->validate();
-        $kategori_req = [];
-        $kategori_req = [$this->kategori_req];
+        $kategori_req = $this->kategori_req;
         $post_judul = $this->post_judul;
-        dd($kategori_req);
+
+        foreach ($kategori_req as $item) {
+            $kategori_find = Kategori::where('id', $kategori_req)->get();
+            dump($kategori_find);
+        }
     }
 }

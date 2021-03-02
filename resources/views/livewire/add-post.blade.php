@@ -54,10 +54,15 @@
                         <div class="form-group">
                             <label class="form-label">Kategori : </label>
                             <div class="selectgroup selectgroup-pills">
-                                @php $i = 1; @endphp
+                                @php
+                                $i = 1;
+                                $k = 1;
+                                $increment = [];
+                                @endphp
                                 @foreach ($kategori as $cat)
                                     <label class="selectgroup-item">
-                                        <input type="checkbox" wire:model="kategori_req[]" value="{{ $cat->id }}" class="selectgroup-input" checked="">
+                                        <input type="checkbox" wire:model="kategori_req.{{ $i++ }}" value="{{ $cat->id }}" class="selectgroup-input" checked="">
+                                        {{-- <input type="checkbox" wire:model="increment.{{ $k++ }}" value="2"> --}}
                                         <span class="selectgroup-button">{{ $cat->kategori_nama }}</span>
                                     </label>
                                 @endforeach
@@ -77,8 +82,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Default Input Text</label>
-                            <textarea name="post_body">
+                            <textarea wire:model="post_body">
                             </textarea>
                         </div>
                     </div>
@@ -93,13 +97,13 @@
 @section('after-js')
 
 <script>
-    $(document).ready(function(){
+    // $(document).ready(function(){
         tinymce.init({
           selector: 'textarea',
           plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
           toolbar_mode: 'floating',
        });
-});
+// });
 </script>
     
 @endsection
