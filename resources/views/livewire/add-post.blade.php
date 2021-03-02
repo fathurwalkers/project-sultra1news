@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <form wire:submit.prevent="addPost">
+        <form wire:submit.prevent="addPost" enctype="multipart/form-data">
             @csrf
         <div class="row">
 
@@ -26,6 +26,26 @@
                                 </div>
                                 <input type="text" class="form-control phone-number" wire:model="post_judul">
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><h6>Header Foto : </h6></label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                <input type="file" class="form-control phone-number" wire:model="post_headerfoto">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="custom-switch mt-2">
+                                <input type="checkbox" wire:model="post_status" class="custom-switch-input" value="1">
+                                <span class="custom-switch-indicator"></span>
+                                <span class="custom-switch-description">Publish ?</span>
+                              </label>
                         </div>
 
                     </div>

@@ -13,6 +13,7 @@ class AddPost extends Component
     public $post_body;
     public $kategori_req;
     public $increment;
+    public $post_status;
     public function render()
     {
         $kategori = Kategori::latest()->get();
@@ -33,6 +34,9 @@ class AddPost extends Component
         $this->validate();
         $kategori_req = $this->kategori_req;
         $post_judul = $this->post_judul;
+        $post_status = $this->post_status;
+
+        dd($post_status);
 
         foreach ($kategori_req as $item) {
             $kategori_find = Kategori::where('id', $kategori_req)->get();
