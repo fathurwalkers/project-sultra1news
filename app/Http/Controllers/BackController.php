@@ -39,4 +39,14 @@ class BackController extends Controller
         }
         return redirect()->route('post-index');
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function post_login(Request $request)
+    {
+        //
+    }
 }
