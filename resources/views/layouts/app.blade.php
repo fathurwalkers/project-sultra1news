@@ -154,10 +154,10 @@
           <div class="section-header">
             <h1>Dashboard</h1>
           </div>
-          <div class="row">
+          {{-- <div class="row"> --}}
             {{-- {{ $slot }} --}}
             @yield('content')
-          </div>
+          {{-- </div> --}}
         </section>
       </div>
       {{-- <footer class="main-footer">
