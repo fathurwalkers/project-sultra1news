@@ -48,6 +48,17 @@ class BackController extends Controller
 
     public function post_login(Request $request)
     {
-        //
+        $username = $request->username;
+        $password = $request->password;
+        $data_login = Login::where('username', $username)->first();
+        if ($data_login) {
+            $checkpassword = Hash::check($password, $data_login->password)
+            if ($checkpassword) {
+                if ($data_login->status == 'aktif') {
+                    $users = session($data_login);
+                    return redirect()->route('dashboard');
+                }
+            }
+        }
     }
 }

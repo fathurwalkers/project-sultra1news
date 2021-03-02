@@ -25,19 +25,23 @@ class DatabaseSeeder extends Seeder
         ]);
         $saveDetail->save();
 
-        $hashed = Hash::make('password', [
+        $password = 'jancok';
+        $hashedPassword = Hash::make($password, [
             'rounds' => 12,
         ]);
         $login = new Login;
         $saveLogin = $login->create([
-            'username' => 'admin',
-            'password' => 'admin',
-            'email' => 'admin@sultra1news.com',
+            'username' => 'fathurwalkers',
+            'password' => $hashedPassword,
             'email' => 'admin@sultra1news.com',
             'level' => 'admin',
             'status' => 'aktif',
             'token' => Str::random(16),
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
+        $saveLogin->detail()->associate($saveDetail->id);
+        $saveLogin->save();
 
         $kategori_array = [
             'Nasional',
