@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
             $table->string('post_headerfoto');
             $table->string('post_status');
             $table->string('post_code');
+            $table->dateTime('post_tanggalpublish');
 
             $table->unsignedBigInteger('kategori_id')->nullable();
             $table->unsignedBigInteger('detail_id')->nullable();

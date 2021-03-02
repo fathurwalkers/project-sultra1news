@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Faker\Factory as Faker;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class FrontController extends Controller
 {

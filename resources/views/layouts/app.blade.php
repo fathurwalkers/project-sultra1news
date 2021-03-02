@@ -151,6 +151,9 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
+
+          <div class="container">
+
           <div class="section-header">
             <h1>Dashboard</h1>
           </div>
@@ -158,6 +161,9 @@
             {{-- {{ $slot }} --}}
             @yield('content')
           {{-- </div> --}}
+
+        </div>
+        
         </section>
       </div>
       {{-- <footer class="main-footer">

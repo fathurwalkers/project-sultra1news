@@ -33,6 +33,7 @@ class BackController extends Controller
                 'post_headerfoto' => 'image/no-image.png',
                 'post_status' => 'published',
                 'post_code' => $post_code,
+                'post_tanggalpublish' => now()
             ]);
             $savePost->save();
         }
