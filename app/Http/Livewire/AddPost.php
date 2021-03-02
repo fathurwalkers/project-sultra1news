@@ -36,11 +36,9 @@ class AddPost extends Component
         $post_judul = $this->post_judul;
         $post_status = $this->post_status;
 
-        dd($post_status);
-
-        foreach ($kategori_req as $item) {
-            $kategori_find = Kategori::where('id', $kategori_req)->get();
-            dump($kategori_find);
-        }
+        // foreach ($kategori_req as $item) {
+        //     $kategori_find = Kategori::where('id', $kategori_req)->get();
+        //     dump($kategori_find);
+        // }
     }
 }

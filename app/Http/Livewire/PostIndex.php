@@ -39,7 +39,7 @@ class PostIndex extends Component
 
     public function delete($id)
     {
-        $post = Post::find($id);
-        dd($post);
+        // $post = Post::find($id);
+        // dd($post);
     }
 }

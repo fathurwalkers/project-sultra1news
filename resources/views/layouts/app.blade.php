@@ -18,6 +18,7 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/stisla/assets/components.css') }}">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <livewire:styles />
   @yield('after-css')
 </head>

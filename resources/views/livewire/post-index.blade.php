@@ -46,7 +46,7 @@
                                         <td class="py-1">{{ date('d/m/y', intval($item->post_tanggalpublish)) }}</td>
                                         <td class="py-1">{{ date('d/m/y', strtotime($item->created_at)) }}</td>
                                         <td class="py-1">
-                                            <button wire:click="edit({{ $item->id }})" id="editme" class="btn btn-success mx-1">Edit</button>
+                                            <button wire:click="edit({{ $item->id }})" onclick="return confirm('Do you want to go?')" id="editme" class="btn btn-success mx-1">Edit</button>
                                             <button wire:click="info" class="btn btn-info mx-1">Info</button>
                                             <button wire:click="delete({{ $item->id }})" class="btn btn-danger mx-1">Delete</button>
                                         </td>
@@ -80,25 +80,7 @@
 
 @section('after-js')
 <script>
-$("#editme").fireModal({
-    body: '
-
-    <p>Your content goes here.</p>
-    
-    ',
-    created: function(modal) {
-        console.log('Modal has been created');
-    },
-    buttons: [
-      {
-        text: 'Action',
-        class: 'btn btn-primary btn-shadow',
-        handler: function(modal) {
-          alert('Clicked');
-        }
-      }
-    ]
-  });
+       
 </script>
 @endsection
 

@@ -40,14 +40,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="custom-switch mt-2">
-                                <input type="checkbox" wire:model="post_status" class="custom-switch-input" value="1">
-                                <span class="custom-switch-indicator"></span>
-                                <span class="custom-switch-description">Publish ?</span>
-                              </label>
-                        </div>
-
                     </div>
                 </div>
 
@@ -89,7 +81,18 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        
+                        <div class="form-group">
+                            <label class="custom-switch mt-2">Post Status : &nbsp;
+                                <input type="checkbox" wire:model="post_status" class="custom-switch-input" value="1">
+                                <span class="custom-switch-indicator"></span>
+                                <span class="custom-switch-description">Publish ?</span>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-lg btn-primary" id="submitbutton">
+                            submit Post
+                          </button>
                         
                     </div>
                 </div>
@@ -117,13 +120,30 @@
 @section('after-js')
 
 <script>
-    // $(document).ready(function(){
         tinymce.init({
           selector: 'textarea',
           plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
           toolbar_mode: 'floating',
        });
-// });
+
+       $(document).ready(function(){
+            $("#submitbutton").click(function(){
+                Swal.fire({
+                    title: 'Submit Post?',
+                    text: "apakah anda ingin menambahkan post.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "{{ route('post-index') }}";
+                    }
+                });
+            });
+        });
+
 </script>
     
 @endsection
