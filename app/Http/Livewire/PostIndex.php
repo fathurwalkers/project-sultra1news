@@ -25,4 +25,21 @@ class PostIndex extends Component
                 ]
         )->extends('layouts.app')->section('content');
     }
+
+    public function edit($id)
+    {
+        $post = Post::find($id);
+        dd($post);
+    }
+
+    public function info()
+    {
+        //
+    }
+
+    public function delete($id)
+    {
+        $post = Post::find($id);
+        dd($post);
+    }
 }

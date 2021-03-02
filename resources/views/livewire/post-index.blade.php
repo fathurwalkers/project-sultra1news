@@ -13,6 +13,11 @@
                     </div> --}}
                     
                     <div class="card-body">
+                        @if($post->count() == 0)
+                        <div class="alert alert-danger">
+                            <p>Tidak ada Post</p>
+                        </div>
+                        @endif
                         
                         <div class="table-responsive">
                             
@@ -29,6 +34,7 @@
                                         <th>Menu Kelola</th>
                                     </tr>
 
+                                    @if($post)
                                     @foreach ($post as $item)
                                     <tr>
                                         <td class="py-1">{{ $loop->iteration }}</td>
@@ -40,12 +46,13 @@
                                         <td class="py-1">{{ date('d/m/y', intval($item->post_tanggalpublish)) }}</td>
                                         <td class="py-1">{{ date('d/m/y', strtotime($item->created_at)) }}</td>
                                         <td class="py-1">
-                                            <a href="#" id="editme" class="btn btn-success mx-1">Edit</a>
-                                            <a href="#" class="btn btn-info mx-1">Info</a>
-                                            <a href="#" class="btn btn-danger mx-1">Delete</a>
+                                            <button wire:click="edit({{ $item->id }})" id="editme" class="btn btn-success mx-1">Edit</button>
+                                            <button wire:click="info" class="btn btn-info mx-1">Info</button>
+                                            <button wire:click="delete({{ $item->id }})" class="btn btn-danger mx-1">Delete</button>
                                         </td>
                                     </tr>
                                     @endforeach
+                                    @endif
                                     
                                 </tbody>
 
