@@ -24,9 +24,4 @@ class PostIndex extends Component
                 ]
         )->extends('layouts.app')->section('content');
     }
-
-    // public function paginationView()
-    // {
-    //     return 'custom-pagination-links-view';
-    // }
 }
