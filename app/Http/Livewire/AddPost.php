@@ -41,4 +41,9 @@ class AddPost extends Component
         //     dump($kategori_find);
         // }
     }
+
+    public function gallery()
+    {
+        //
+    }
 }

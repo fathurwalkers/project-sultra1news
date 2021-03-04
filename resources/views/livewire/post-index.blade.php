@@ -37,7 +37,22 @@
 
 @section('after-js')
 <script>
-       
+       $("#my-button").fireModal({
+        body: '<p>Your content goes here.</p>',
+        created: function(modal) {
+            console.log('Modal has been created');
+        },
+        buttons: [
+            {
+            text: 'Action',
+            class: 'btn btn-primary btn-shadow',
+            handler: function(modal) {
+                // do something
+                alert('Clicked');
+            }
+            }
+        ]
+        });
 </script>
 @endsection
 
