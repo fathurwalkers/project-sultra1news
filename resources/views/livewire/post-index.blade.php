@@ -47,7 +47,7 @@
                                         <td class="py-1">{{ date('d/m/y', strtotime($item->created_at)) }}</td>
                                         <td class="py-1">
                                             <button wire:click="edit({{ $item->id }})" onclick="return confirm('Do you want to go?')" id="editme" class="btn btn-success mx-1">Edit</button>
-                                            <button wire:click="info" class="btn btn-info mx-1">Info</button>
+                                            <button wire:click="info({{ $item->id }})" class="btn btn-info mx-1">Info</button>
                                             <button wire:click="delete({{ $item->id }})" class="btn btn-danger mx-1">Delete</button>
                                         </td>
                                     </tr>

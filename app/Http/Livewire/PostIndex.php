@@ -32,9 +32,10 @@ class PostIndex extends Component
         dd($post);
     }
 
-    public function info()
+    public function info($id)
     {
-        //
+        $post = Post::find($id);
+        $this->emitTo('sendingPost', 'PostDetail', $post);
     }
 
     public function delete($id)
