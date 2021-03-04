@@ -23,8 +23,6 @@ class BackController extends Controller
             $array_random2 = ['2', '3', '4', '5'];
             $kategori = Kategori::select('id')->get()->toArray();
             $randomkategori = Arr::random($kategori, Arr::random($array_random2));
-            $randomkategoricollect = collect($randomkategori);
-            $count = $randomkategoricollect->count();
             $random = Arr::random($array_random);
             $post_judul = $faker->words($random, true);
             $explode_judul = explode(' ', $post_judul);
