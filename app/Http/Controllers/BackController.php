@@ -39,8 +39,8 @@ class BackController extends Controller
                 'post_code' => $post_code,
                 'post_tanggalpublish' => now()
             ]);
-            $savePost->kategori()->associate($randomkategori);
             $savePost->save();
+            $savePost->kategori()->attach($randomkategori);
         }
         return redirect()->route('post-index');
     }
