@@ -18,12 +18,12 @@ class CreatePostsTable extends Migration
             $table->string('post_code');
             $table->dateTime('post_tanggalpublish');
 
-            $table->unsignedBigInteger('kategori_id')->nullable();
-            $table->unsignedBigInteger('detail_id')->nullable();
+            // $table->unsignedBigInteger('kategori_id')->nullable();
+            // $table->unsignedBigInteger('detail_id')->nullable();
             $table->unsignedBigInteger('gambar_id')->nullable();
 
-            $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
-            $table->foreign('detail_id')->references('id')->on('detail')->onDelete('cascade');
+            // $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
+            // $table->foreign('detail_id')->references('id')->on('detail')->onDelete('cascade');
             $table->foreign('gambar_id')->references('id')->on('gambar')->onDelete('cascade');
 
             $table->timestamps();
