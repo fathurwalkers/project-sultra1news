@@ -10,6 +10,7 @@ use App\Http\Livewire\PostDetail;
 Route::get('/', [FrontController::class, 'home']);
 Route::get('/login', [BackController::class, 'login'])->name('login');
 Route::post('/login', [BackController::class, 'post_login'])->name('post-login');
+Route::post('/logout', [BackController::class, 'logout'])->name('logout');
 
 Route::prefix('/dashboard')->group(function () {
     Route::get('/', [FrontController::class, 'index'])->name('dashboard');

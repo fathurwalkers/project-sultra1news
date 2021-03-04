@@ -53,6 +53,11 @@ class BackController extends Controller
         return view('login');
     }
 
+    public function logout()
+    {
+        //
+    }
+
     public function post_login(Request $request)
     {
         $username = $request->username;
