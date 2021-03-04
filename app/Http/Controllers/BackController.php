@@ -52,7 +52,7 @@ class BackController extends Controller
         $password = $request->password;
         $data_login = Login::where('username', $username)->first();
         if ($data_login) {
-            $checkpassword = Hash::check($password, $data_login->password)
+            $checkpassword = Hash::check($password, $data_login->password);
             if ($checkpassword) {
                 if ($data_login->status == 'aktif') {
                     $users = session($data_login);
