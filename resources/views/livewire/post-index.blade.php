@@ -1,83 +1,35 @@
 <div>
 @section('header-title', 'Daftar Post')
-    {{-- <div class="container"> --}}
+    <div class="container">
+        
+        <div class="row card-group">
 
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <article class="article">
-                <div class="article-header">
-                  <div class="article-image" data-background="assets/img/news/img08.jpg" style="background-image: url(&quot;assets/img/news/img08.jpg&quot;);">
-                  </div>
-                  <div class="article-title">
-                    <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
-                  </div>
-                </div>
-                <div class="article-details">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. </p>
-                  <div class="article-cta">
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <article class="article">
-                <div class="article-header">
-                  <div class="article-image" data-background="assets/img/news/img04.jpg" style="background-image: url(&quot;assets/img/news/img04.jpg&quot;);">
-                  </div>
-                  <div class="article-title">
-                    <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
-                  </div>
-                </div>
-                <div class="article-details">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. </p>
-                  <div class="article-cta">                           
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <article class="article">
-                <div class="article-header">
-                  <div class="article-image" data-background="assets/img/news/img09.jpg" style="background-image: url(&quot;assets/img/news/img09.jpg&quot;);">
-                  </div>
-                  <div class="article-title">
-                    <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
-                  </div>
-                </div>
-                <div class="article-details">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. </p>
-                  <div class="article-cta">                           
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-              <article class="article">
-                <div class="article-header">
-                  <div class="article-image" data-background="assets/img/news/img12.jpg" style="background-image: url(&quot;assets/img/news/img12.jpg&quot;);">
-                  </div>
-                  <div class="article-title">
-                    <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
-                  </div>
-                </div>
-                <div class="article-details">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. </p>
-                  <div class="article-cta">                           
-                    <a href="#" class="btn btn-primary">Read More</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
+            @foreach ($post as $item)
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('/') }}{{ $item->post_headerfoto }}" alt="Card image cap image-responsive"  >
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
 
-    {{-- </div> --}}
+                </div>
+            @endforeach
+
+            </div>
+        </div>
+
+        <div class="row position-absolute top-0 start-50 translate-middle">
+            <div class="col-sm-12 col-lg-12">
+                <div class="justify-content-center">
+                    {{ $post->links() }}
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 @section('after-js')
 <script>
