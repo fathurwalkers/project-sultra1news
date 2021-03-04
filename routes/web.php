@@ -12,7 +12,7 @@ Route::get('/login', [BackController::class, 'login'])->name('login');
 Route::post('/login', [BackController::class, 'post_login'])->name('post-login');
 Route::post('/logout', [BackController::class, 'logout'])->name('logout');
 
-Route::prefix('/dashboard')->group(function () {
+Route::group(['prefix' => '/dashboard', 'middleware' => 'cek-auth'], function () {
     Route::get('/', [FrontController::class, 'index'])->name('dashboard');
     Route::get('/generate-post', [BackController::class, 'generate_post'])->name('generate-post');
     Route::get('/post-index', PostIndex::class)->name('post-index');

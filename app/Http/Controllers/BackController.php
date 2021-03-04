@@ -57,7 +57,7 @@ class BackController extends Controller
         return view('login');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         $request->session()->forget('data_login');
         return redirect()->route('login');
