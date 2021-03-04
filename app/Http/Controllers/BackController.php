@@ -20,8 +20,8 @@ class BackController extends Controller
 
         for ($i = 1; $i<20 ; $i++) {
             $array_random = ['5', '6', '7', '8', '9', '10'];
-            $kategori = Kategori::select('id')->get();
-            $randomkategori = Arr::set($kategori);
+            $kategori = Kategori::select('id')->get()->toArray();
+            $randomkategori = array_rand($kategori);
             $random = Arr::random($array_random);
             $post_judul = $faker->words($random, true);
             $explode_judul = explode(' ', $post_judul);
