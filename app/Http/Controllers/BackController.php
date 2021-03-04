@@ -50,12 +50,17 @@ class BackController extends Controller
 
     public function login()
     {
+        $users = session('data_login');
+        if ($users) {
+            return redirect()->route('dashboard')->with('sudah_login', 'Anda sedang login, tidak dapat menuju ke Halaman Login!');
+        }
         return view('login');
     }
 
     public function logout()
     {
-        //
+        $request->session()->forget('data_login');
+        return redirect()->route('login');
     }
 
     public function post_login(Request $request)
