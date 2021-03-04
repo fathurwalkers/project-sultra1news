@@ -10,16 +10,18 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Post;
 use App\Models\Login;
+use App\Models\Kategori;
 
 class BackController extends Controller
 {
     public function generate_post()
     {
         $faker = Faker::create('id_ID');
-        
 
         for ($i = 1; $i<20 ; $i++) {
             $array_random = ['5', '6', '7', '8', '9', '10'];
+            $kategori = Kategori::select('id')->get();
+            $randomkategori = Arr::set($kategori);
             $random = Arr::random($array_random);
             $post_judul = $faker->words($random, true);
             $explode_judul = explode(' ', $post_judul);
@@ -37,6 +39,7 @@ class BackController extends Controller
                 'post_code' => $post_code,
                 'post_tanggalpublish' => now()
             ]);
+            $savePost->kategori()->associate($randomkategori);
             $savePost->save();
         }
         return redirect()->route('post-index');
