@@ -22,7 +22,7 @@ class BackController extends Controller
             $array_random = ['5', '6', '7', '8', '9', '10'];
             $array_random2 = ['2', '3', '4', '5'];
             $kategori = Kategori::select('id')->get()->toArray();
-            $randomkategori = Arr::random($kategori, 3);
+            $randomkategori = Arr::random($kategori, Arr::random($array_random2));
             $randomkategoricollect = collect($randomkategori);
             $count = $randomkategoricollect->count();
             $random = Arr::random($array_random);

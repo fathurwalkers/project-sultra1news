@@ -157,7 +157,16 @@
           <div class="container">
 
           <div class="section-header">
-            <h1>@yield('header-title')</h1>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-9 col-lg-9">
+                  <h1>@yield('header-title')</h1>
+                </div>
+                @yield('header-pagination')
+              </div>
+            </div>
+
           </div>
           {{-- <div class="row"> --}}
             {{-- {{ $slot }} --}}
