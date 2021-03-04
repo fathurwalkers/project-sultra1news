@@ -40,6 +40,11 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <textarea wire:model="post_body">
+                            </textarea>
+                        </div>
+
                     </div>
                 </div>
 
@@ -100,7 +105,7 @@
 
 
 
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            {{-- <div class="col-sm-12 col-md-12 col-lg-12">
                 
                 <div class="card">
                     <div class="card-body">
@@ -111,7 +116,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
 
         </div>
         </form>
@@ -126,23 +131,23 @@
           toolbar_mode: 'floating',
        });
 
-       $(document).ready(function(){
-            $("#submitbutton").click(function(){
-                Swal.fire({
-                    title: 'Submit Post?',
-                    text: "apakah anda ingin menambahkan post.",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
-                    }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location = "{{ route('post-index') }}";
-                    }
-                });
-            });
-        });
+    //    $(document).ready(function(){
+    //         $("#submitbutton").click(function(){
+    //             Swal.fire({
+    //                 title: 'Submit Post?',
+    //                 text: "apakah anda ingin menambahkan post.",
+    //                 icon: 'warning',
+    //                 showCancelButton: true,
+    //                 confirmButtonColor: '#3085d6',
+    //                 cancelButtonColor: '#d33',
+    //                 confirmButtonText: 'Yes, delete it!'
+    //                 }).then((result) => {
+    //                 if (result.isConfirmed) {
+    //                     window.location = "{{ route('post-index') }}";
+    //                 }
+    //             });
+    //         });
+    //     });
 
 </script>
     
