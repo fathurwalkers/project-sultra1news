@@ -20,8 +20,9 @@ class BackController extends Controller
 
         for ($i = 1; $i<20 ; $i++) {
             $array_random = ['5', '6', '7', '8', '9', '10'];
+            $array_random2 = ['2', '3', '4', '5'];
             $kategori = Kategori::select('id')->get()->toArray();
-            $randomkategori = array_rand($kategori);
+            $randomkategori = Arr::random($kategori, intval(Arr::random($array_random2)));
             $random = Arr::random($array_random);
             $post_judul = $faker->words($random, true);
             $explode_judul = explode(' ', $post_judul);
@@ -39,8 +40,8 @@ class BackController extends Controller
                 'post_code' => $post_code,
                 'post_tanggalpublish' => now()
             ]);
-            $savePost->save();
             $savePost->kategori()->attach($randomkategori);
+            $savePost->save();
         }
         return redirect()->route('post-index');
     }

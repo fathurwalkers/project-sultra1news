@@ -14,10 +14,8 @@ class CreateKategoriPostsTable extends Migration
             $table->unsignedBigInteger('kategori_id')->nullable();
             $table->unsignedBigInteger('post_id')->nullable();
 
-            $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
-            $table->foreign('post_id')->references('id')->on('post')->onDelete('cascade');
-
-            $table->timestamps();
+            $table->foreign('kategori_id')->references('id')->on('kategori');
+            $table->foreign('post_id')->references('id')->on('post');
         });
     }
 

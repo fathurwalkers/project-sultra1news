@@ -14,13 +14,15 @@ class KategoriPost extends Model
     protected $table = 'kategori_post';
     protected $guarded = [];
 
+    public $timestamps = false;
+
     public function kategori()
     {
-        return $this->belongsToMany(Kategori::class);
+        return $this->hasMany(Kategori::class);
     }
 
     public function post()
     {
-        return $this->belongsToMany(Post::class);
+        return $this->hasMany(Post::class);
     }
 }

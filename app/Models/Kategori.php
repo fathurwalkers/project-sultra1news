@@ -15,6 +15,6 @@ class Kategori extends Model
 
     public function post()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsToMany(Post::class);
     }
 }
