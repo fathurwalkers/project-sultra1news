@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Post;
+use App\Models\Login;
 
 class BackController extends Controller
 {
@@ -55,7 +56,7 @@ class BackController extends Controller
             $checkpassword = Hash::check($password, $data_login->password);
             if ($checkpassword) {
                 if ($data_login->status == 'aktif') {
-                    $users = session($data_login);
+                    $users = session(['data_login' => $data_login]);
                     return redirect()->route('dashboard');
                 }
             }
