@@ -12,6 +12,7 @@ class CreateGambarsTable extends Migration
             $table->id();
             $table->string('gambar_nama');
             $table->string('gambar_lokasi');
+            $table->string('gambar_url');
             $table->string('gambar_kode');
             $table->timestamps();
         });
