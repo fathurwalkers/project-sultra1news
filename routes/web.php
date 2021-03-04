@@ -16,5 +16,5 @@ Route::prefix('/dashboard')->group(function () {
     Route::get('/generate-post', [BackController::class, 'generate_post'])->name('generate-post');
     Route::get('/post-index', PostIndex::class)->name('post-index');
     Route::get('/add-post', AddPost::class)->name('add-post');
-    Route::get('/detail-post', PostDetail::class)->name('post-detail');
+    Route::get('/detail-post/{id}', PostDetail::class)->name('post-detail');
 });

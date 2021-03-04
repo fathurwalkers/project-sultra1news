@@ -4,20 +4,21 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Post;
+use Illuminate\Support\Collection;
 
 class PostDetail extends Component
 {
-    protected $listeners = [
-        'sendingPost' => 'handleSendingPost'
-    ];
-
+    public $post;
     public function render()
     {
-        return view('livewire.post-detail');
+        $post = collect([$this->post]);
+        return view('livewire.post-detail', [
+            'post' => $post
+        ])->extends('layouts.app')->section('content');
     }
 
-    public function handleSendingPost(Post $post)
+    public function mount($id)
     {
-        dd($post);
+        $this->post = Post::find($id);
     }
 }

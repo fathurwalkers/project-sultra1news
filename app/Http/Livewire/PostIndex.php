@@ -35,7 +35,7 @@ class PostIndex extends Component
     public function info($id)
     {
         $post = Post::find($id);
-        $this->emitTo('sendingPost', 'PostDetail', $post);
+        return redirect()->route('post-detail', $post->id);
     }
 
     public function delete($id)
