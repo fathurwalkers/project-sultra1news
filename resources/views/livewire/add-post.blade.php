@@ -2,6 +2,8 @@
     @section('header-title', 'Tambah Post')
     @section('after-css')
     <script src="https://cdn.tiny.cloud/1/0fzrtif8pxlg6kw3rfi13s2t5xzfaiqpavx3fiqci9ysvmva/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="stylesheet" href="{{ asset('vendor/editor/editor.css') }}">
+
     @endsection
 
     <div class="container">
@@ -47,7 +49,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea wire:model="post_body">
+                            <textarea id="txtEditor" wire:model="post_body">
                             </textarea>
                         </div>
 
@@ -114,17 +116,21 @@
 
     </div>
 @section('after-js')
+<script src="{{ asset('vendor/editor/editor.js') }}"></script>
 
 <script>
-        tinymce.init({
-          selector: 'textarea',
-          plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-          toolbar_mode: 'floating',
-       });
+    //     tinymce.init({
+    //       selector: 'textarea',
+    //       plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+    //       toolbar_mode: 'floating',
+    //    });
 
         // window.livewire.on('Gallery', () => {
         //     $('#exampleModal').modal('hide');
         // });
+            $(document).ready(function() {
+                $("#txtEditor").Editor();
+            });
 
 </script>
     
