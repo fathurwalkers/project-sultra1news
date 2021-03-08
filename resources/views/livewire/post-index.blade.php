@@ -27,9 +27,9 @@
                             <div class="row my-2">
                                 <div class="col-sm-12 col-lg-12">
                                     <div class="btn-group mx-2">
-                                        <button wire:click="info({{ $item->id }})" class="btn btn-primary mx-1">Info</button>
-                                        <button wire:click="edit({{ $item->id }})" class="btn btn-success mx-1">Edit</button>
-                                        <button wire:click="delete({{ $item->id }})" class="btn btn-danger mx-1">Delete</button>
+                                        <button value="{{ $item->id }}" id="info" class="info btn btn-primary mx-1">Info</button>
+                                        <button  class="btn btn-success mx-1">Edit</button>
+                                        <button  class="btn btn-danger mx-1">Delete</button>
                                     </div>
                                 </div>
                             </div>
@@ -48,22 +48,29 @@
 
 @section('after-js')
 <script>
-       $("#my-button").fireModal({
-        body: '<p>Your content goes here.</p>',
-        created: function(modal) {
-            console.log('Modal has been created');
-        },
-        buttons: [
-            {
-            text: 'Action',
-            class: 'btn btn-primary btn-shadow',
-            handler: function(modal) {
-                // do something
-                alert('Clicked');
-            }
-            }
-        ]
-        });
+    $(document).ready(function(){
+        $('.info').click(each(function() {
+            var infoId = $('.info').each(val());
+            console.log(infoId);
+            // var str1 = "{{ url('/post-edit') }}/" + infoId;
+            // window.location.href = (str1);
+            // Swal.fire({
+            // title: 'Are you sure?',
+            // text: "You won't be able to revert this!",
+            // icon: 'warning',
+            // showCancelButton: true,
+            // confirmButtonColor: '#3085d6',
+            // cancelButtonColor: '#d33',
+            // confirmButtonText: 'Yes, delete it!'
+            // }).then((result) => {
+            //     if (result.isConfirmed) {
+            //         window.location.href = "";
+            //     } else {
+                    
+            //     }
+            // });
+        }));
+    });
 </script>
 @endsection
 

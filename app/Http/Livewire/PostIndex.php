@@ -27,22 +27,22 @@ class PostIndex extends Component
         )->extends('layouts.app')->section('content');
     }
 
-    public function edit($id)
-    {
-        return redirect()->route('post-edit', $id);
-    }
+    // public function edit($id)
+    // {
+    //     return redirect()->route('post-edit', $id);
+    // }
 
-    public function info($id)
-    {
-        Alert::success('Success Title', 'Success Message');
-        $post = Post::find($id);
-        return redirect()->route('post-detail', $post->id);
-    }
+    // public function info($id)
+    // {
+    //     Alert::success('Success Title', 'Success Message');
+    //     $post = Post::find($id);
+    //     return redirect()->route('post-detail', $post->id);
+    // }
 
-    public function delete($id)
-    {
-        $post = Post::find($id);
-        $post->forceDelete();
-        return back();
-    }
+    // public function delete($id)
+    // {
+    //     $post = Post::find($id);
+    //     $post->forceDelete();
+    //     return back();
+    // }
 }
