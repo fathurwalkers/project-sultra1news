@@ -27,7 +27,7 @@
                             <div class="row my-2">
                                 <div class="col-sm-12 col-lg-12">
                                     <div class="btn-group mx-2">
-                                        <button value="{{ $item->id }}" id="info" class="info btn btn-primary mx-1">Info</button>
+                                        <button value="{{ intval($item->id) }}" class="info btn btn-primary mx-1">Info</button>
                                         <button  class="btn btn-success mx-1">Edit</button>
                                         <button  class="btn btn-danger mx-1">Delete</button>
                                     </div>
@@ -48,29 +48,30 @@
 
 @section('after-js')
 <script>
-    $(document).ready(function(){
-        $('.info').click(each(function() {
-            var infoId = $('.info').each(val());
-            console.log(infoId);
-            // var str1 = "{{ url('/post-edit') }}/" + infoId;
-            // window.location.href = (str1);
-            // Swal.fire({
-            // title: 'Are you sure?',
-            // text: "You won't be able to revert this!",
-            // icon: 'warning',
-            // showCancelButton: true,
-            // confirmButtonColor: '#3085d6',
-            // cancelButtonColor: '#d33',
-            // confirmButtonText: 'Yes, delete it!'
-            // }).then((result) => {
-            //     if (result.isConfirmed) {
-            //         window.location.href = "";
-            //     } else {
+    // $(document).ready(function(){
+    //     $('.info', this).click(function() {
+    //         var infoId = $('.info').val($(this));
+    //         var textvalue = $(this).('.info').text(infoId);
+    //         console.log('http://127.0.0.1:5001/dashboard/post-edit/'+ parseInt(textvalue));
+    //         var str1 = "{{ url('/post-edit') }}/" + infoId;
+    //         window.location.href = (str1);
+    //         Swal.fire({
+    //         title: 'Are you sure?',
+    //         text: "You won't be able to revert this!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, delete it!'
+    //         }).then((result) => {
+    //             if (result.isConfirmed) {
+    //                 window.location.href = "";
+    //             } else {
                     
-            //     }
-            // });
-        }));
-    });
+    //             }
+    //         });
+    //     });
+    // });
 </script>
 @endsection
 
