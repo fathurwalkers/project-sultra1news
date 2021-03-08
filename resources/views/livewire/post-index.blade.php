@@ -23,6 +23,16 @@
                         </div>
                         @endforeach
                         <p class="card-text">{{ Str::limit($item->post_body, 70) }}</p>
+                        <div class="container">
+                            <div class="row my-2">
+                                <div class="col-sm-12 col-lg-12">
+                                    <div class="btn-group">
+                                        <button wire:click="info({{ $item->id }})" class="btn btn-primary">Info</button>
+                                        <button wire:click="edit({{ $item->id }})" class="btn btn-success">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
 

@@ -8,6 +8,7 @@ use App\Models\Kategori;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PostIndex extends Component
 {
@@ -34,6 +35,7 @@ class PostIndex extends Component
 
     public function info($id)
     {
+        Alert::success('Success Title', 'Success Message');
         $post = Post::find($id);
         return redirect()->route('post-detail', $post->id);
     }
