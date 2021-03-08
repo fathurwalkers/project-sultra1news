@@ -26,9 +26,10 @@
                         <div class="container">
                             <div class="row my-2">
                                 <div class="col-sm-12 col-lg-12">
-                                    <div class="btn-group">
-                                        <button wire:click="info({{ $item->id }})" class="btn btn-primary">Info</button>
-                                        <button wire:click="edit({{ $item->id }})" class="btn btn-success">Edit</button>
+                                    <div class="btn-group mx-2">
+                                        <button wire:click="info({{ $item->id }})" class="btn btn-primary mx-1">Info</button>
+                                        <button wire:click="edit({{ $item->id }})" class="btn btn-success mx-1">Edit</button>
+                                        <button wire:click="delete({{ $item->id }})" class="btn btn-danger mx-1">Delete</button>
                                     </div>
                                 </div>
                             </div>

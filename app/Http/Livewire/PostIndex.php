@@ -29,8 +29,7 @@ class PostIndex extends Component
 
     public function edit($id)
     {
-        $post = Post::find($id);
-        dd($post);
+        return redirect()->route('post-edit', $id);
     }
 
     public function info($id)

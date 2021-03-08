@@ -18,4 +18,6 @@ Route::group(['prefix' => '/dashboard', 'middleware' => 'cek-auth'], function ()
     Route::get('/post-index', PostIndex::class)->name('post-index');
     Route::get('/add-post', AddPost::class)->name('add-post');
     Route::get('/detail-post/{id}', PostDetail::class)->name('post-detail');
+
+    Route::get('/post-edit/{id}', [BackController::class, 'edit_post'])->name('post-edit');
 });

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Post;
 use App\Models\Login;
 use App\Models\Kategori;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BackController extends Controller
 {
@@ -77,5 +78,10 @@ class BackController extends Controller
                 }
             }
         }
+    }
+
+    public function edit_post(Post $id)
+    {
+        return 'null';
     }
 }
