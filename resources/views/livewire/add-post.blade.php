@@ -43,8 +43,6 @@
                                     Open Form
                                 </button> --}}
 
-                                
-
                             </div>
                         </div>
 
@@ -119,19 +117,9 @@
 <script src="{{ asset('vendor/editor/editor.js') }}"></script>
 
 <script>
-    //     tinymce.init({
-    //       selector: 'textarea',
-    //       plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-    //       toolbar_mode: 'floating',
-    //    });
-
-        // window.livewire.on('Gallery', () => {
-        //     $('#exampleModal').modal('hide');
-        // });
-            $(document).ready(function() {
-                $("#txtEditor").Editor();
-            });
-
+    $(document).ready(function() {
+        $("#txtEditor").Editor();
+    });
 </script>
     
 @endsection
