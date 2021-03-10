@@ -17,7 +17,7 @@ Route::group(['prefix' => '/dashboard', 'middleware' => 'cek-auth'], function ()
     Route::get('/generate-post', [BackController::class, 'generate_post'])->name('generate-post');
     Route::get('/post-index', PostIndex::class)->name('post-index');
     Route::get('/add-post', AddPost::class)->name('add-post');
-    Route::get('/detail-post/{id}', PostDetail::class)->name('post-detail');
-
     Route::get('/post-edit/{id}', [BackController::class, 'edit_post'])->name('post-edit');
+    Route::get('/post-detail/{id}', [BackController::class, 'detail_post'])->name('post-detail');
+    Route::post('/post-delete/{id}', [BackController::class, 'delete_post'])->name('post-delete');
 });

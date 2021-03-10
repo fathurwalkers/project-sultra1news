@@ -1,6 +1,12 @@
 <div>
 @section('header-title', 'Daftar Post')
+    @if (session('berhasil_hapus'))
+        <div class="alert alert-success">
+            {{ session('berhasil_hapus') }}
+        </div>
+    @endif
     <div class="container">
+
 
         <div class="row">
             <div class="col-sm-3 col-lg-3 mx-auto">
@@ -27,9 +33,12 @@
                             <div class="row my-2">
                                 <div class="col-sm-12 col-lg-12">
                                     <div class="btn-group mx-2">
-                                        <button value="{{ intval($item->id) }}" class="info btn btn-primary mx-1">Info</button>
-                                        <button  class="btn btn-success mx-1">Edit</button>
-                                        <button  class="btn btn-danger mx-1">Delete</button>
+                                        <a href="{{ route('post-detail', $item->id) }}" class="btn btn-info mx-1">Info</a>
+                                        <a href="{{ route('post-edit', $item->id) }}" class="btn btn-success mx-1">Edit</a>
+                                        <form action="{{ route('post-delete', $item->id) }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger mx-1">Delete</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

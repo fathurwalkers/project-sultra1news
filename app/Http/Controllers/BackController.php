@@ -82,6 +82,18 @@ class BackController extends Controller
 
     public function edit_post(Post $id)
     {
-        return 'null';
+        dd($id);
+    }
+
+    public function detail_post(Post $id)
+    {
+        dd($id);
+    }
+
+
+    public function delete_post(Request $request, Post $id)
+    {
+        $id->forceDelete();
+        return redirect()->route('post-index')->with('berhasil_hapus', 'Postingan telah berhasil di Hapus!');
     }
 }
