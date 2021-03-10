@@ -48,30 +48,6 @@
 
 @section('after-js')
 <script>
-    // $(document).ready(function(){
-    //     $('.info', this).click(function() {
-    //         var infoId = $('.info').val($(this));
-    //         var textvalue = $(this).('.info').text(infoId);
-    //         console.log('http://127.0.0.1:5001/dashboard/post-edit/'+ parseInt(textvalue));
-    //         var str1 = "{{ url('/post-edit') }}/" + infoId;
-    //         window.location.href = (str1);
-    //         Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to revert this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, delete it!'
-    //         }).then((result) => {
-    //             if (result.isConfirmed) {
-    //                 window.location.href = "";
-    //             } else {
-                    
-    //             }
-    //         });
-    //     });
-    // });
 </script>
 @endsection
 
